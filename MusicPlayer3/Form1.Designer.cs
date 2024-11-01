@@ -36,7 +36,10 @@
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.NameMusic = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.trackBarPosition = new System.Windows.Forms.TrackBar();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarPosition)).BeginInit();
             this.SuspendLayout();
             // 
             // ButStop
@@ -89,19 +92,33 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // trackBarPosition
+            // 
+            this.trackBarPosition.Location = new System.Drawing.Point(247, 168);
+            this.trackBarPosition.Name = "trackBarPosition";
+            this.trackBarPosition.Size = new System.Drawing.Size(287, 45);
+            this.trackBarPosition.TabIndex = 4;
+            this.trackBarPosition.MouseDown += new System.Windows.Forms.MouseEventHandler(this.trackBarPosition_MouseDown);
+            this.trackBarPosition.MouseUp += new System.Windows.Forms.MouseEventHandler(this.trackBarPosition_MouseUp);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.trackBarPosition);
             this.Controls.Add(this.NameMusic);
             this.Controls.Add(this.ButPlyer);
             this.Controls.Add(this.ButRepeat);
             this.Controls.Add(this.ButStop);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarPosition)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -115,6 +132,8 @@
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Label NameMusic;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.TrackBar trackBarPosition;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

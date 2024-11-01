@@ -219,7 +219,7 @@
   <data name="ButRepeat.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAC/mSURBVHhe7d15
+        vgAADr4B6kKxwAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAC/mSURBVHhe7d15
         3K3lvPjxp3nQPO2ipE6SIaEMaZBUCMcJOZEThQolEsmYyHhQp6LJlOEkSWSIDMWJylCa0awiaZ7H3+/z
         Pbt9are/z97PsNa6r/u6Pp/X6/2HxGute7iee61139c1ZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZm
         ZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmjfYIPB/74Ms4DRfjetyF
@@ -430,7 +430,7 @@
   <data name="ButPlyer.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAACU
-        3AAAlNwBQ4kC4AAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACFZSURBVHhe7d15
+        2gAAlNoBw4pGewAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACFZSURBVHhe7d15
         1K11WT5wmQQEBEQJkRwzp0w0zazMscxpmZk5LafKqczMqXJcpmakLqcGtTK1JC2nlamZKQ5ZpOacOAsq
         EoIIAhIg+Lv2j+NyC/fhnPc9+733M3yutT7/XH8U5937+X4vxfM+l/nud787Sclhccd4YvxDvD8+Ff8b
         58bZ8ZX4WLw7/joeGT8T+1f/NwFgKspyrJIj44/jC7EoNuuC+M94dFyl+v8FAGNWlmOS7B+/F5+J5Ut8
@@ -581,5 +581,8 @@
   </metadata>
   <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>154, 17</value>
+  </metadata>
+  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>309, 17</value>
   </metadata>
 </root>
