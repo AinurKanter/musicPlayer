@@ -22,10 +22,20 @@ namespace MusicPlayer3
             InitializeComponent();
             LoadAudioFile();
 
+
+
+            // Установка начального уровня громкости
+            trackBarVolume.Minimum = 0;
+            trackBarVolume.Maximum = 100;
+            trackBarVolume.Value = 70; // 70% громкости по умолчанию
+            trackBarVolume.Scroll += trackBarVolume_Scroll;
+
             // Настройка таймера для обновления позиции ползунка
             timer = new Timer();
             timer.Interval = 500;
             timer.Tick += Timer_Tick;
+
+            labRepaet.Text = "Repeat off";
         }
 
         private void LoadAudioFile()
@@ -82,7 +92,7 @@ namespace MusicPlayer3
         private void ButRepeat_Click(object sender, EventArgs e)
         {
             isRepeating = !isRepeating;
-            ButRepeat.Text = isRepeating ? "Repeat On" : "Repeat Off";
+            labRepaet.Text = isRepeating ? "Repeat On" : "Repeat Off";
         }
 
         // Обработчик события таймера для обновления позиции трека
@@ -92,6 +102,8 @@ namespace MusicPlayer3
             {
                 trackBarPosition.Value = (int)audioFileReader.CurrentTime.TotalSeconds;
             }
+
+            labCurrentTime.Text = FormatTime((int)audioFileReader.CurrentTime.TotalSeconds);
         }
 
         // Обработчик для изменения позиции воспроизведения с помощью ползунка
@@ -101,6 +113,9 @@ namespace MusicPlayer3
             {
                 // Обновление позиции в момент перемещения ползунка
                 audioFileReader.CurrentTime = TimeSpan.FromSeconds(trackBarPosition.Value);
+
+                // Обновляем метку текущего времени при перемещении ползунка
+                labCurrentTime.Text = FormatTime(trackBarPosition.Value);
             }
         }
 
@@ -153,6 +168,27 @@ namespace MusicPlayer3
             if (waveOutDevice != null) waveOutDevice.Dispose();
             timer.Dispose();
             base.OnFormClosing(e);
+        }
+
+        private void trackBarVolume_Scroll(object sender, EventArgs e)
+        {
+            if (audioFileReader != null)
+            {
+                // Устанавливаем громкость в зависимости от положения ползунка
+                audioFileReader.Volume = trackBarVolume.Value / 100.0f;
+            }
+
+            labVolume.Text = trackBarVolume.Value + "%";
+
+
+
+        }
+
+        private string FormatTime(int totalSeconds)
+        {
+            int minutes = totalSeconds / 60;
+            int seconds = totalSeconds % 60;
+            return $"{minutes:D2}:{seconds:D2}";
         }
     }
 }

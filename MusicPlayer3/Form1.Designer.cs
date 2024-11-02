@@ -38,8 +38,13 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.trackBarPosition = new System.Windows.Forms.TrackBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.trackBarVolume = new System.Windows.Forms.TrackBar();
+            this.labRepaet = new System.Windows.Forms.Label();
+            this.labVolume = new System.Windows.Forms.Label();
+            this.labCurrentTime = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarPosition)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarVolume)).BeginInit();
             this.SuspendLayout();
             // 
             // ButStop
@@ -105,11 +110,51 @@
             // 
             this.timer1.Interval = 1000;
             // 
+            // trackBarVolume
+            // 
+            this.trackBarVolume.Location = new System.Drawing.Point(341, 299);
+            this.trackBarVolume.Maximum = 1;
+            this.trackBarVolume.Name = "trackBarVolume";
+            this.trackBarVolume.Size = new System.Drawing.Size(105, 45);
+            this.trackBarVolume.TabIndex = 5;
+            this.trackBarVolume.Scroll += new System.EventHandler(this.trackBarVolume_Scroll);
+            // 
+            // labRepaet
+            // 
+            this.labRepaet.AutoSize = true;
+            this.labRepaet.Location = new System.Drawing.Point(488, 258);
+            this.labRepaet.Name = "labRepaet";
+            this.labRepaet.Size = new System.Drawing.Size(12, 13);
+            this.labRepaet.TabIndex = 6;
+            this.labRepaet.Text = "\\";
+            // 
+            // labVolume
+            // 
+            this.labVolume.AutoSize = true;
+            this.labVolume.Location = new System.Drawing.Point(375, 331);
+            this.labVolume.Name = "labVolume";
+            this.labVolume.Size = new System.Drawing.Size(27, 13);
+            this.labVolume.TabIndex = 7;
+            this.labVolume.Text = "70%";
+            // 
+            // labCurrentTime
+            // 
+            this.labCurrentTime.AutoSize = true;
+            this.labCurrentTime.Location = new System.Drawing.Point(550, 181);
+            this.labCurrentTime.Name = "labCurrentTime";
+            this.labCurrentTime.Size = new System.Drawing.Size(28, 13);
+            this.labCurrentTime.TabIndex = 8;
+            this.labCurrentTime.Text = "0:00";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labCurrentTime);
+            this.Controls.Add(this.labVolume);
+            this.Controls.Add(this.labRepaet);
+            this.Controls.Add(this.trackBarVolume);
             this.Controls.Add(this.trackBarPosition);
             this.Controls.Add(this.NameMusic);
             this.Controls.Add(this.ButPlyer);
@@ -119,6 +164,7 @@
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarPosition)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarVolume)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,6 +180,10 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.TrackBar trackBarPosition;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.TrackBar trackBarVolume;
+        private System.Windows.Forms.Label labRepaet;
+        private System.Windows.Forms.Label labVolume;
+        private System.Windows.Forms.Label labCurrentTime;
     }
 }
 
