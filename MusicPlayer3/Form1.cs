@@ -13,16 +13,18 @@ namespace MusicPlayer3
         private Timer timer;
         private bool userIsDragging = false;  // Флаг для отслеживания взаимодействия пользователя с ползунком
 
-        private string filePath = @"F:\VisualStudio\musicPlayer\Aerosmith - Dream On (Re-record).mp3";
+
+        //private string filePath = @"F:\VisualStudio\musicPlayer\Aerosmith - Dream On (Re-record).mp3";
+        private string filePath = @"C:\Users\Admin\source\repos\MusicPlayer3\Aerosmith - Dream On (Re-record).mp3";
 
         public Form1()
         {
             InitializeComponent();
             LoadAudioFile();
 
-            //  таймер для обновления позиции ползунка
+            // Настройка таймера для обновления позиции ползунка
             timer = new Timer();
-            timer.Interval = 500; 
+            timer.Interval = 500;
             timer.Tick += Timer_Tick;
         }
 
@@ -35,7 +37,7 @@ namespace MusicPlayer3
                 waveOutDevice.Init(audioFileReader);
                 waveOutDevice.PlaybackStopped += WaveOutDevice_PlaybackStopped;
 
-                // максимальное значение для трека в зависимости от длины 
+                // Устанавливаем максимальное значение для трека в зависимости от длины файла
                 trackBarPosition.Maximum = (int)audioFileReader.TotalTime.TotalSeconds;
             }
             catch (Exception ex)
@@ -49,6 +51,10 @@ namespace MusicPlayer3
         {
             if (audioFileReader != null && waveOutDevice != null)
             {
+                if (waveOutDevice.PlaybackState == PlaybackState.Stopped)
+                {
+                    audioFileReader.Position = 0;
+                }
                 waveOutDevice.Play();
                 timer.Start(); // Запуск таймера для обновления ползунка
                 isPlaying = true;
@@ -56,10 +62,20 @@ namespace MusicPlayer3
         }
 
         // Пауза
+        private void PausePlayback()
+        {
+            if (waveOutDevice != null && waveOutDevice.PlaybackState == PlaybackState.Playing)
+            {
+                waveOutDevice.Pause();
+                isPlaying = false;
+            }
+        }
+
+        // Обработчик для кнопки паузы
         private void ButStop_Click(object sender, EventArgs e)
         {
-            StopPlayback();
-            timer.Stop(); // Остановка таймера при остановке музыки
+            PausePlayback();
+            timer.Stop(); // Остановка таймера при паузе
         }
 
         // Повтор воспроизведения
@@ -108,13 +124,15 @@ namespace MusicPlayer3
         {
             if (isRepeating && audioFileReader != null)
             {
-                audioFileReader.Position = 0;
-                waveOutDevice.Play();
+                audioFileReader.Position = 0;      // Сброс позиции в начало
+                waveOutDevice.Play();              // Перезапуск воспроизведения
+                isPlaying = true;                  // Обновление флага состояния
             }
             else
             {
                 timer.Stop(); // Остановка таймера, если воспроизведение завершено
                 trackBarPosition.Value = 0; // Сброс ползунка в начало при завершении воспроизведения
+                isPlaying = false; // Сброс флага состояния
             }
         }
 
@@ -124,6 +142,7 @@ namespace MusicPlayer3
             if (waveOutDevice != null)
             {
                 waveOutDevice.Stop();
+                isPlaying = false;
             }
         }
 
