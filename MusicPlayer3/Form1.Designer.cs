@@ -34,7 +34,7 @@
             this.ButRepeat = new System.Windows.Forms.Button();
             this.ButPlyer = new System.Windows.Forms.Button();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.NameMusic = new System.Windows.Forms.Label();
+            this.labMusicTitle = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.trackBarPosition = new System.Windows.Forms.TrackBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -42,6 +42,7 @@
             this.labRepaet = new System.Windows.Forms.Label();
             this.labVolume = new System.Windows.Forms.Label();
             this.labCurrentTime = new System.Windows.Forms.Label();
+            this.maxCurrentTime = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarPosition)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarVolume)).BeginInit();
@@ -82,15 +83,18 @@
             this.ButPlyer.UseVisualStyleBackColor = true;
             this.ButPlyer.Click += new System.EventHandler(this.ButPlyer_Click);
             // 
-            // NameMusic
+            // labMusicTitle
             // 
-            this.NameMusic.AutoSize = true;
-            this.NameMusic.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.NameMusic.Location = new System.Drawing.Point(335, 108);
-            this.NameMusic.Name = "NameMusic";
-            this.NameMusic.Size = new System.Drawing.Size(111, 25);
-            this.NameMusic.TabIndex = 3;
-            this.NameMusic.Text = "TextMusic";
+            this.labMusicTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labMusicTitle.AutoSize = true;
+            this.labMusicTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labMusicTitle.Location = new System.Drawing.Point(242, 116);
+            this.labMusicTitle.Name = "labMusicTitle";
+            this.labMusicTitle.Size = new System.Drawing.Size(139, 25);
+            this.labMusicTitle.TabIndex = 3;
+            this.labMusicTitle.Text = "labMusicTitle";
             // 
             // contextMenuStrip1
             // 
@@ -140,23 +144,33 @@
             // labCurrentTime
             // 
             this.labCurrentTime.AutoSize = true;
-            this.labCurrentTime.Location = new System.Drawing.Point(550, 181);
+            this.labCurrentTime.Location = new System.Drawing.Point(213, 180);
             this.labCurrentTime.Name = "labCurrentTime";
             this.labCurrentTime.Size = new System.Drawing.Size(28, 13);
             this.labCurrentTime.TabIndex = 8;
             this.labCurrentTime.Text = "0:00";
+            // 
+            // maxCurrentTime
+            // 
+            this.maxCurrentTime.AutoSize = true;
+            this.maxCurrentTime.Location = new System.Drawing.Point(541, 180);
+            this.maxCurrentTime.Name = "maxCurrentTime";
+            this.maxCurrentTime.Size = new System.Drawing.Size(28, 13);
+            this.maxCurrentTime.TabIndex = 9;
+            this.maxCurrentTime.Text = "0:00";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.maxCurrentTime);
             this.Controls.Add(this.labCurrentTime);
             this.Controls.Add(this.labVolume);
             this.Controls.Add(this.labRepaet);
             this.Controls.Add(this.trackBarVolume);
             this.Controls.Add(this.trackBarPosition);
-            this.Controls.Add(this.NameMusic);
+            this.Controls.Add(this.labMusicTitle);
             this.Controls.Add(this.ButPlyer);
             this.Controls.Add(this.ButRepeat);
             this.Controls.Add(this.ButStop);
@@ -176,7 +190,7 @@
         private System.Windows.Forms.Button ButRepeat;
         private System.Windows.Forms.Button ButPlyer;
         private System.Windows.Forms.BindingSource bindingSource1;
-        private System.Windows.Forms.Label NameMusic;
+        private System.Windows.Forms.Label labMusicTitle;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.TrackBar trackBarPosition;
         private System.Windows.Forms.Timer timer1;
@@ -184,6 +198,7 @@
         private System.Windows.Forms.Label labRepaet;
         private System.Windows.Forms.Label labVolume;
         private System.Windows.Forms.Label labCurrentTime;
+        private System.Windows.Forms.Label maxCurrentTime;
     }
 }
 

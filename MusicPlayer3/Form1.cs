@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Windows.Forms;
 using NAudio.Wave;
 
@@ -27,8 +28,15 @@ namespace MusicPlayer3
             // Установка начального уровня громкости
             trackBarVolume.Minimum = 0;
             trackBarVolume.Maximum = 100;
-            trackBarVolume.Value = 70; // 70% громкости по умолчанию
+            trackBarVolume.Value = 65; // громкость по умолчанию
             trackBarVolume.Scroll += trackBarVolume_Scroll;
+
+            labVolume.Text = trackBarVolume.Value + "%";
+
+            // Получаем название файла без пути и расширения
+            string musicTitle = Path.GetFileNameWithoutExtension(filePath);
+            labMusicTitle.Text = musicTitle; // Устанавливаем название музыки в метке
+
 
             // Настройка таймера для обновления позиции ползунка
             timer = new Timer();
@@ -49,6 +57,10 @@ namespace MusicPlayer3
 
                 // Устанавливаем максимальное значение для трека в зависимости от длины файла
                 trackBarPosition.Maximum = (int)audioFileReader.TotalTime.TotalSeconds;
+
+                // Устанавливаем общее время трека
+                maxCurrentTime.Text = FormatTime((int)audioFileReader.TotalTime.TotalSeconds);
+
             }
             catch (Exception ex)
             {
@@ -102,7 +114,7 @@ namespace MusicPlayer3
             {
                 trackBarPosition.Value = (int)audioFileReader.CurrentTime.TotalSeconds;
             }
-
+            //сколько песни прошло
             labCurrentTime.Text = FormatTime((int)audioFileReader.CurrentTime.TotalSeconds);
         }
 
