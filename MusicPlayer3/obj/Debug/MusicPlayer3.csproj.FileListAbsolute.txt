@@ -70,3 +70,6 @@ F:\VisualStudio\musicPlayer\MusicPlayer3\obj\Debug\MusicPlayer3.csproj.CoreCompi
 F:\VisualStudio\musicPlayer\MusicPlayer3\obj\Debug\MusicPla.329A981F.Up2Date
 F:\VisualStudio\musicPlayer\MusicPlayer3\obj\Debug\MusicPlayer3.exe
 F:\VisualStudio\musicPlayer\MusicPlayer3\obj\Debug\MusicPlayer3.pdb
+C:\Users\Admin\source\repos\MusicPlayer3\MusicPlayer3\bin\Debug\TagLibSharp.dll
+C:\Users\Admin\source\repos\MusicPlayer3\MusicPlayer3\bin\Debug\TagLibSharp.pdb
+C:\Users\Admin\source\repos\MusicPlayer3\MusicPlayer3\bin\Debug\TagLibSharp.xml

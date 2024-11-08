@@ -43,9 +43,11 @@
             this.labVolume = new System.Windows.Forms.Label();
             this.labCurrentTime = new System.Windows.Forms.Label();
             this.maxCurrentTime = new System.Windows.Forms.Label();
+            this.pictureBoxCover = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarPosition)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarVolume)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCover)).BeginInit();
             this.SuspendLayout();
             // 
             // ButStop
@@ -54,7 +56,7 @@
             this.ButStop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ButStop.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.ButStop.ForeColor = System.Drawing.Color.Cornsilk;
-            this.ButStop.Location = new System.Drawing.Point(369, 219);
+            this.ButStop.Location = new System.Drawing.Point(167, 222);
             this.ButStop.Name = "ButStop";
             this.ButStop.Size = new System.Drawing.Size(55, 36);
             this.ButStop.TabIndex = 0;
@@ -65,7 +67,7 @@
             // 
             this.ButRepeat.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ButRepeat.BackgroundImage")));
             this.ButRepeat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ButRepeat.Location = new System.Drawing.Point(491, 219);
+            this.ButRepeat.Location = new System.Drawing.Point(289, 222);
             this.ButRepeat.Name = "ButRepeat";
             this.ButRepeat.Size = new System.Drawing.Size(43, 36);
             this.ButRepeat.TabIndex = 1;
@@ -76,7 +78,7 @@
             // 
             this.ButPlyer.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ButPlyer.BackgroundImage")));
             this.ButPlyer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ButPlyer.Location = new System.Drawing.Point(247, 219);
+            this.ButPlyer.Location = new System.Drawing.Point(45, 222);
             this.ButPlyer.Name = "ButPlyer";
             this.ButPlyer.Size = new System.Drawing.Size(59, 36);
             this.ButPlyer.TabIndex = 2;
@@ -90,7 +92,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labMusicTitle.AutoSize = true;
             this.labMusicTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labMusicTitle.Location = new System.Drawing.Point(242, 116);
+            this.labMusicTitle.Location = new System.Drawing.Point(40, 113);
             this.labMusicTitle.Name = "labMusicTitle";
             this.labMusicTitle.Size = new System.Drawing.Size(139, 25);
             this.labMusicTitle.TabIndex = 3;
@@ -103,7 +105,7 @@
             // 
             // trackBarPosition
             // 
-            this.trackBarPosition.Location = new System.Drawing.Point(247, 168);
+            this.trackBarPosition.Location = new System.Drawing.Point(45, 171);
             this.trackBarPosition.Name = "trackBarPosition";
             this.trackBarPosition.Size = new System.Drawing.Size(287, 45);
             this.trackBarPosition.TabIndex = 4;
@@ -116,7 +118,7 @@
             // 
             // trackBarVolume
             // 
-            this.trackBarVolume.Location = new System.Drawing.Point(341, 299);
+            this.trackBarVolume.Location = new System.Drawing.Point(139, 302);
             this.trackBarVolume.Maximum = 1;
             this.trackBarVolume.Name = "trackBarVolume";
             this.trackBarVolume.Size = new System.Drawing.Size(105, 45);
@@ -126,7 +128,7 @@
             // labRepaet
             // 
             this.labRepaet.AutoSize = true;
-            this.labRepaet.Location = new System.Drawing.Point(488, 258);
+            this.labRepaet.Location = new System.Drawing.Point(286, 261);
             this.labRepaet.Name = "labRepaet";
             this.labRepaet.Size = new System.Drawing.Size(12, 13);
             this.labRepaet.TabIndex = 6;
@@ -135,7 +137,7 @@
             // labVolume
             // 
             this.labVolume.AutoSize = true;
-            this.labVolume.Location = new System.Drawing.Point(375, 331);
+            this.labVolume.Location = new System.Drawing.Point(173, 334);
             this.labVolume.Name = "labVolume";
             this.labVolume.Size = new System.Drawing.Size(27, 13);
             this.labVolume.TabIndex = 7;
@@ -144,7 +146,7 @@
             // labCurrentTime
             // 
             this.labCurrentTime.AutoSize = true;
-            this.labCurrentTime.Location = new System.Drawing.Point(213, 180);
+            this.labCurrentTime.Location = new System.Drawing.Point(11, 183);
             this.labCurrentTime.Name = "labCurrentTime";
             this.labCurrentTime.Size = new System.Drawing.Size(28, 13);
             this.labCurrentTime.TabIndex = 8;
@@ -153,17 +155,28 @@
             // maxCurrentTime
             // 
             this.maxCurrentTime.AutoSize = true;
-            this.maxCurrentTime.Location = new System.Drawing.Point(541, 180);
+            this.maxCurrentTime.Location = new System.Drawing.Point(339, 183);
             this.maxCurrentTime.Name = "maxCurrentTime";
             this.maxCurrentTime.Size = new System.Drawing.Size(28, 13);
             this.maxCurrentTime.TabIndex = 9;
             this.maxCurrentTime.Text = "0:00";
+            // 
+            // pictureBoxCover
+            // 
+            this.pictureBoxCover.Location = new System.Drawing.Point(420, 31);
+            this.pictureBoxCover.Name = "pictureBoxCover";
+            this.pictureBoxCover.Size = new System.Drawing.Size(354, 298);
+            this.pictureBoxCover.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxCover.TabIndex = 10;
+            this.pictureBoxCover.TabStop = false;
+            this.pictureBoxCover.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBoxCover);
             this.Controls.Add(this.maxCurrentTime);
             this.Controls.Add(this.labCurrentTime);
             this.Controls.Add(this.labVolume);
@@ -179,6 +192,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarPosition)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarVolume)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCover)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,6 +213,7 @@
         private System.Windows.Forms.Label labVolume;
         private System.Windows.Forms.Label labCurrentTime;
         private System.Windows.Forms.Label maxCurrentTime;
+        private System.Windows.Forms.PictureBox pictureBoxCover;
     }
 }
 

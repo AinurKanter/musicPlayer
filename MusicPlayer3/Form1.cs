@@ -2,6 +2,10 @@
 using System.IO;
 using System.Windows.Forms;
 using NAudio.Wave;
+using TagLib;
+using System.Drawing;
+
+
 
 namespace MusicPlayer3
 {
@@ -61,6 +65,23 @@ namespace MusicPlayer3
                 // Устанавливаем общее время трека
                 maxCurrentTime.Text = FormatTime((int)audioFileReader.TotalTime.TotalSeconds);
 
+
+                // Загружаем обложку, если она существует
+                TagLib.File tagFile = TagLib.File.Create(filePath);
+                if (tagFile.Tag.Pictures.Length > 0)
+                {
+                    var bin = tagFile.Tag.Pictures[0].Data.Data; // Извлекаем данные изображения
+                    using (var ms = new MemoryStream(bin))
+                    {
+                        pictureBoxCover.Image = Image.FromStream(ms); // Устанавливаем изображение в PictureBox
+                        pictureBoxCover.SizeMode = PictureBoxSizeMode.StretchImage; // Опционально: растягиваем изображение
+                    }
+                }
+                else
+                {
+                    pictureBoxCover.Image = null; // Если изображения нет, очищаем PictureBox
+                    MessageBox.Show("No image");
+                }
             }
             catch (Exception ex)
             {
@@ -192,8 +213,6 @@ namespace MusicPlayer3
 
             labVolume.Text = trackBarVolume.Value + "%";
 
-
-
         }
 
         private string FormatTime(int totalSeconds)
@@ -201,6 +220,11 @@ namespace MusicPlayer3
             int minutes = totalSeconds / 60;
             int seconds = totalSeconds % 60;
             return $"{minutes:D2}:{seconds:D2}";
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
