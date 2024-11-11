@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\MusicPlayer3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CEF75272-B9B3-4397-83D7-EC5533E425CB}|MusicPlayer3\\MusicPlayer3.csproj|c:\\users\\admin\\source\\repos\\musicplayer3\\musicplayer3\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CEF75272-B9B3-4397-83D7-EC5533E425CB}|MusicPlayer3\\MusicPlayer3.csproj|C:\\Users\\Admin\\source\\repos\\MusicPlayer3\\musicplayer3\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CEF75272-B9B3-4397-83D7-EC5533E425CB}|MusicPlayer3\\MusicPlayer3.csproj|solutionrelative:musicplayer3\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CEF75272-B9B3-4397-83D7-EC5533E425CB}|MusicPlayer3\\MusicPlayer3.csproj|C:\\Users\\Admin\\source\\repos\\MusicPlayer3\\musicplayer3\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{CEF75272-B9B3-4397-83D7-EC5533E425CB}|MusicPlayer3\\MusicPlayer3.csproj|c:\\users\\admin\\source\\repos\\musicplayer3\\musicplayer3\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{CEF75272-B9B3-4397-83D7-EC5533E425CB}|MusicPlayer3\\MusicPlayer3.csproj|solutionrelative:musicplayer3\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -32,9 +32,10 @@
               "RelativeDocumentMoniker": "MusicPlayer3\\Form1.Designer.cs",
               "ToolTip": "C:\\Users\\Admin\\source\\repos\\MusicPlayer3\\MusicPlayer3\\Form1.Designer.cs",
               "RelativeToolTip": "MusicPlayer3\\Form1.Designer.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAuwC4AAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAqwCQBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-01T14:06:35.307Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
@@ -45,7 +46,7 @@
               "RelativeDocumentMoniker": "MusicPlayer3\\Form1.cs",
               "ToolTip": "C:\\Users\\Admin\\source\\repos\\MusicPlayer3\\MusicPlayer3\\Form1.cs",
               "RelativeToolTip": "MusicPlayer3\\Form1.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAEYBAAAAAAAAAAAUwEwBAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-31T08:19:24.558Z",
               "EditorCaption": ""

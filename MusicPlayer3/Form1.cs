@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using NAudio.Wave;
 using TagLib;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 
 namespace MusicPlayer3
 {
@@ -18,18 +19,25 @@ namespace MusicPlayer3
         private bool userIsDragging = false;
         private bool gifShown = false; // Флаг для отображения GIF только один раз
         private int triggerTimeInSeconds = 240; // Время для отображения GIF в секундах
- 
+        private bool volume = true;
+        private Color dominantColor;
+
+        //Пути к иконкам звука
+        private string volumeFileTrue = @"C:\Users\Admin\source\repos\MusicPlayer3\Картинки\звук.png";
+        private string volumeFileFalse = @"C:\Users\Admin\source\repos\MusicPlayer3\Картинки\нет звука.png";
 
         private string filePath = @"C:\Users\Admin\source\repos\MusicPlayer3\Aerosmith - Dream On (Re-record).mp3";
         private string gifFilePath = @"C:\Users\Admin\source\repos\MusicPlayer3\Картинки\Кратос.gif"; // Путь к GIF-файлу
         private Image albumCover; // Сохраняем оригинальную обложку
 
-        
+
 
         public Form1()
         {
             InitializeComponent();
             LoadAudioFile();
+
+            dominantColor = GetDominantColor(pictureBoxCover.Image);
 
             // Установка начального уровня громкости
             trackBarVolume.Minimum = 0;
@@ -38,6 +46,9 @@ namespace MusicPlayer3
             trackBarVolume.Scroll += trackBarVolume_Scroll;
 
             labVolume.Text = trackBarVolume.Value + "%";
+
+            pictureVolume.Image = Image.FromFile(volumeFileTrue);
+
 
             // Получаем название файла без пути и расширения
             string musicTitle = Path.GetFileNameWithoutExtension(filePath);
@@ -61,8 +72,54 @@ namespace MusicPlayer3
             trackBarPosition.MouseDown += trackBarPosition_MouseDown;
             trackBarPosition.MouseUp += trackBarPosition_MouseUp;
         }
+        //Метод определения цвета для градиента на фоне
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
 
-        private void LoadAudioFile()
+            // Создаём градиент, используя доминирующий цвет
+            using (LinearGradientBrush brush = new LinearGradientBrush(this.ClientRectangle,
+                                                                       Color.Black,    // Черный для контраста (начальный цвет)
+                                                                       dominantColor,  // Доминирующий цвет (конечный цвет)
+                                                                       45F))           // Угол градиента
+            {
+                e.Graphics.FillRectangle(brush, this.ClientRectangle);
+            }
+        }
+
+
+        private Color GetDominantColor(Image image)
+        {
+            Bitmap bitmap = new Bitmap(image);
+            int width = bitmap.Width;
+            int height = bitmap.Height;
+
+            long sumR = 0, sumG = 0, sumB = 0;
+            int pixelCount = width * height;
+
+            // Проходим по всем пикселям и суммируем значения цветов
+            for (int y = 0; y < height; y++)
+            {
+                for (int x = 0; x < width; x++)
+                {
+                    Color pixelColor = bitmap.GetPixel(x, y);
+                    sumR += pixelColor.R;
+                    sumG += pixelColor.G;
+                    sumB += pixelColor.B;
+                }
+            }
+
+            // Вычисляем среднее значение для каждого цвета
+            int avgR = (int)(sumR / pixelCount);
+            int avgG = (int)(sumG / pixelCount);
+            int avgB = (int)(sumB / pixelCount);
+
+            return Color.FromArgb(avgR, avgG, avgB);  // Возвращаем средний цвет
+        }
+    
+
+
+    private void LoadAudioFile()
         {
             try
             {
@@ -141,6 +198,12 @@ namespace MusicPlayer3
                 trackBarPosition.Value = (int)audioFileReader.CurrentTime.TotalSeconds;
             }
             labCurrentTime.Text = FormatTime((int)audioFileReader.CurrentTime.TotalSeconds);
+
+            if (userIsDragging == true)
+            {
+                labCurrentTime.Text = FormatTime((int)trackBarPosition.Value);
+
+            }
 
             // Показать GIF в заданное время
             if ((int)audioFileReader.CurrentTime.TotalSeconds >= triggerTimeInSeconds && !gifShown && checkBoxGif.Checked == true)
@@ -247,6 +310,37 @@ namespace MusicPlayer3
         private void checkBoxGif_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+
+        private void pictureVolume_Click(object sender, EventArgs e)
+        {
+            float tempVolume = trackBarVolume.Value ;
+            if (volume == true)
+            {
+                
+                pictureVolume.Image = Image.FromFile(volumeFileFalse);
+                labVolume.Text = tempVolume + "%";
+                audioFileReader.Volume = trackBarVolume.Value / 0f;
+                volume = false;
+            }
+            else
+            {
+                volume = true;
+                pictureVolume.Image = Image.FromFile(volumeFileTrue);
+                audioFileReader.Volume = tempVolume / 100f;
+                labVolume.Text = trackBarVolume.Value + "%";
+            }
+        }
+
+        private void Butanekdot_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Атрей: — Папа, почему мы постоянно путешествуем по разным мирам и воюем с богами?\r\n\r\nКратос, вздыхая: — Потому что так дешевле, чем ипотека.");
+        }
+
+        private void butRestart_Click(object sender, EventArgs e)
+        {
+            audioFileReader.Position = 0;
         }
     }
 }
