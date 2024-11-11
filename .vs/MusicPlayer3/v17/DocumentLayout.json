@@ -1,17 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\MusicPlayer3\\",
+  "WorkspaceRootPath": "F:\\VisualStudio\\musicPlayer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CEF75272-B9B3-4397-83D7-EC5533E425CB}|MusicPlayer3\\MusicPlayer3.csproj|C:\\Users\\Admin\\source\\repos\\MusicPlayer3\\musicplayer3\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CEF75272-B9B3-4397-83D7-EC5533E425CB}|MusicPlayer3\\MusicPlayer3.csproj|solutionrelative:musicplayer3\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CEF75272-B9B3-4397-83D7-EC5533E425CB}|MusicPlayer3\\MusicPlayer3.csproj|c:\\users\\admin\\source\\repos\\musicplayer3\\musicplayer3\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{CEF75272-B9B3-4397-83D7-EC5533E425CB}|MusicPlayer3\\MusicPlayer3.csproj|F:\\VisualStudio\\musicPlayer\\musicplayer3\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{CEF75272-B9B3-4397-83D7-EC5533E425CB}|MusicPlayer3\\MusicPlayer3.csproj|solutionrelative:musicplayer3\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CEF75272-B9B3-4397-83D7-EC5533E425CB}|MusicPlayer3\\MusicPlayer3.csproj|C:\\Users\\Admin\\source\\repos\\MusicPlayer3\\musicplayer3\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CEF75272-B9B3-4397-83D7-EC5533E425CB}|MusicPlayer3\\MusicPlayer3.csproj|f:\\visualstudio\\musicplayer\\musicplayer3\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEF75272-B9B3-4397-83D7-EC5533E425CB}|MusicPlayer3\\MusicPlayer3.csproj|solutionrelative:musicplayer3\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEF75272-B9B3-4397-83D7-EC5533E425CB}|MusicPlayer3\\MusicPlayer3.csproj|f:\\visualstudio\\musicplayer\\musicplayer3\\like.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CEF75272-B9B3-4397-83D7-EC5533E425CB}|MusicPlayer3\\MusicPlayer3.csproj|solutionrelative:musicplayer3\\like.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEF75272-B9B3-4397-83D7-EC5533E425CB}|MusicPlayer3\\MusicPlayer3.csproj|F:\\VisualStudio\\musicPlayer\\musicplayer3\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CEF75272-B9B3-4397-83D7-EC5533E425CB}|MusicPlayer3\\MusicPlayer3.csproj|solutionrelative:musicplayer3\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -22,17 +26,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\MusicPlayer3\\MusicPlayer3\\Form1.Designer.cs",
+              "DocumentMoniker": "F:\\VisualStudio\\musicPlayer\\MusicPlayer3\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "MusicPlayer3\\Form1.Designer.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\MusicPlayer3\\MusicPlayer3\\Form1.Designer.cs",
+              "ToolTip": "F:\\VisualStudio\\musicPlayer\\MusicPlayer3\\Form1.Designer.cs",
               "RelativeToolTip": "MusicPlayer3\\Form1.Designer.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAqwCQBAAAAAAAAAAAAAA==",
+              "ViewState": "AQIAAMUAAAAAAAAAAAAYwNoAAABFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-01T14:06:35.307Z",
               "IsPinned": true,
@@ -40,27 +44,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\MusicPlayer3\\MusicPlayer3\\Form1.cs",
+              "DocumentMoniker": "F:\\VisualStudio\\musicPlayer\\MusicPlayer3\\Form1.cs",
               "RelativeDocumentMoniker": "MusicPlayer3\\Form1.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\MusicPlayer3\\MusicPlayer3\\Form1.cs",
+              "ToolTip": "F:\\VisualStudio\\musicPlayer\\MusicPlayer3\\Form1.cs",
               "RelativeToolTip": "MusicPlayer3\\Form1.cs",
-              "ViewState": "AgIAAEYBAAAAAAAAAAAUwEwBAAANAAAAAAAAAA==",
+              "ViewState": "AQIAAHIBAAAAAAAAAAAYwIcBAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-31T08:19:24.558Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\MusicPlayer3\\MusicPlayer3\\Form1.cs",
+              "DocumentMoniker": "F:\\VisualStudio\\musicPlayer\\MusicPlayer3\\Form1.cs",
               "RelativeDocumentMoniker": "MusicPlayer3\\Form1.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\MusicPlayer3\\MusicPlayer3\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "ToolTip": "F:\\VisualStudio\\musicPlayer\\MusicPlayer3\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "MusicPlayer3\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-31T06:48:00.687Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "like.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "F:\\VisualStudio\\musicPlayer\\MusicPlayer3\\like.cs",
+              "RelativeDocumentMoniker": "MusicPlayer3\\like.cs",
+              "ToolTip": "F:\\VisualStudio\\musicPlayer\\MusicPlayer3\\like.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "MusicPlayer3\\like.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T14:10:33.499Z",
               "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
             }
           ]

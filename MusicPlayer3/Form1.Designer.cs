@@ -48,6 +48,8 @@
             this.pictureVolume = new System.Windows.Forms.PictureBox();
             this.Butanekdot = new System.Windows.Forms.Button();
             this.butRestart = new System.Windows.Forms.Button();
+            this.butlike = new System.Windows.Forms.Button();
+            this.labLike = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarPosition)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarVolume)).BeginInit();
@@ -62,7 +64,7 @@
             this.ButStop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ButStop.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.ButStop.ForeColor = System.Drawing.Color.Cornsilk;
-            this.ButStop.Location = new System.Drawing.Point(124, 231);
+            this.ButStop.Location = new System.Drawing.Point(126, 158);
             this.ButStop.Name = "ButStop";
             this.ButStop.Size = new System.Drawing.Size(55, 36);
             this.ButStop.TabIndex = 0;
@@ -74,7 +76,7 @@
             this.ButRepeat.BackColor = System.Drawing.Color.Transparent;
             this.ButRepeat.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ButRepeat.BackgroundImage")));
             this.ButRepeat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ButRepeat.Location = new System.Drawing.Point(304, 231);
+            this.ButRepeat.Location = new System.Drawing.Point(306, 158);
             this.ButRepeat.Name = "ButRepeat";
             this.ButRepeat.Size = new System.Drawing.Size(55, 36);
             this.ButRepeat.TabIndex = 1;
@@ -86,7 +88,7 @@
             this.ButPlyer.BackColor = System.Drawing.Color.Transparent;
             this.ButPlyer.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ButPlyer.BackgroundImage")));
             this.ButPlyer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ButPlyer.Location = new System.Drawing.Point(28, 231);
+            this.ButPlyer.Location = new System.Drawing.Point(30, 158);
             this.ButPlyer.Name = "ButPlyer";
             this.ButPlyer.Size = new System.Drawing.Size(59, 36);
             this.ButPlyer.TabIndex = 2;
@@ -103,7 +105,7 @@
             this.labMusicTitle.Cursor = System.Windows.Forms.Cursors.Default;
             this.labMusicTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labMusicTitle.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labMusicTitle.Location = new System.Drawing.Point(40, 113);
+            this.labMusicTitle.Location = new System.Drawing.Point(42, 40);
             this.labMusicTitle.Name = "labMusicTitle";
             this.labMusicTitle.Size = new System.Drawing.Size(139, 25);
             this.labMusicTitle.TabIndex = 3;
@@ -117,7 +119,7 @@
             // trackBarPosition
             // 
             this.trackBarPosition.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.trackBarPosition.Location = new System.Drawing.Point(45, 171);
+            this.trackBarPosition.Location = new System.Drawing.Point(47, 98);
             this.trackBarPosition.Name = "trackBarPosition";
             this.trackBarPosition.Size = new System.Drawing.Size(287, 45);
             this.trackBarPosition.TabIndex = 4;
@@ -129,7 +131,7 @@
             // trackBarVolume
             // 
             this.trackBarVolume.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.trackBarVolume.Location = new System.Drawing.Point(139, 302);
+            this.trackBarVolume.Location = new System.Drawing.Point(141, 229);
             this.trackBarVolume.Maximum = 100;
             this.trackBarVolume.Name = "trackBarVolume";
             this.trackBarVolume.Size = new System.Drawing.Size(105, 45);
@@ -140,7 +142,8 @@
             // 
             this.labRepaet.AutoSize = true;
             this.labRepaet.BackColor = System.Drawing.Color.Transparent;
-            this.labRepaet.Location = new System.Drawing.Point(301, 270);
+            this.labRepaet.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labRepaet.Location = new System.Drawing.Point(303, 197);
             this.labRepaet.Name = "labRepaet";
             this.labRepaet.Size = new System.Drawing.Size(12, 13);
             this.labRepaet.TabIndex = 6;
@@ -149,8 +152,9 @@
             // labVolume
             // 
             this.labVolume.AutoSize = true;
-            this.labVolume.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labVolume.Location = new System.Drawing.Point(173, 334);
+            this.labVolume.BackColor = System.Drawing.Color.Transparent;
+            this.labVolume.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labVolume.Location = new System.Drawing.Point(176, 277);
             this.labVolume.Name = "labVolume";
             this.labVolume.Size = new System.Drawing.Size(27, 13);
             this.labVolume.TabIndex = 7;
@@ -161,7 +165,7 @@
             this.labCurrentTime.AutoSize = true;
             this.labCurrentTime.BackColor = System.Drawing.Color.Transparent;
             this.labCurrentTime.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labCurrentTime.Location = new System.Drawing.Point(11, 183);
+            this.labCurrentTime.Location = new System.Drawing.Point(13, 110);
             this.labCurrentTime.Name = "labCurrentTime";
             this.labCurrentTime.Size = new System.Drawing.Size(34, 13);
             this.labCurrentTime.TabIndex = 8;
@@ -172,7 +176,7 @@
             this.maxCurrentTime.AutoSize = true;
             this.maxCurrentTime.BackColor = System.Drawing.Color.Transparent;
             this.maxCurrentTime.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.maxCurrentTime.Location = new System.Drawing.Point(339, 183);
+            this.maxCurrentTime.Location = new System.Drawing.Point(341, 110);
             this.maxCurrentTime.Name = "maxCurrentTime";
             this.maxCurrentTime.Size = new System.Drawing.Size(28, 13);
             this.maxCurrentTime.TabIndex = 9;
@@ -206,7 +210,7 @@
             // 
             this.pictureVolume.BackColor = System.Drawing.Color.Transparent;
             this.pictureVolume.Image = ((System.Drawing.Image)(resources.GetObject("pictureVolume.Image")));
-            this.pictureVolume.Location = new System.Drawing.Point(93, 304);
+            this.pictureVolume.Location = new System.Drawing.Point(95, 231);
             this.pictureVolume.Name = "pictureVolume";
             this.pictureVolume.Size = new System.Drawing.Size(40, 39);
             this.pictureVolume.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -230,16 +234,41 @@
             this.butRestart.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
             this.butRestart.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("butRestart.BackgroundImage")));
             this.butRestart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.butRestart.Location = new System.Drawing.Point(211, 231);
+            this.butRestart.Location = new System.Drawing.Point(213, 158);
             this.butRestart.Name = "butRestart";
             this.butRestart.Size = new System.Drawing.Size(55, 36);
             this.butRestart.TabIndex = 14;
             this.butRestart.UseVisualStyleBackColor = true;
             this.butRestart.Click += new System.EventHandler(this.butRestart_Click);
             // 
+            // butlike
+            // 
+            this.butlike.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("butlike.BackgroundImage")));
+            this.butlike.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.butlike.Location = new System.Drawing.Point(306, 231);
+            this.butlike.Name = "butlike";
+            this.butlike.Size = new System.Drawing.Size(55, 43);
+            this.butlike.TabIndex = 15;
+            this.butlike.UseVisualStyleBackColor = true;
+            this.butlike.Click += new System.EventHandler(this.butlike_Click);
+            // 
+            // labLike
+            // 
+            this.labLike.AutoSize = true;
+            this.labLike.BackColor = System.Drawing.Color.Transparent;
+            this.labLike.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labLike.Location = new System.Drawing.Point(309, 286);
+            this.labLike.Name = "labLike";
+            this.labLike.Size = new System.Drawing.Size(33, 13);
+            this.labLike.TabIndex = 16;
+            this.labLike.Text = "Лайк";
+            // 
             // Form1
             // 
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.labLike);
+            this.Controls.Add(this.butlike);
             this.Controls.Add(this.butRestart);
             this.Controls.Add(this.Butanekdot);
             this.Controls.Add(this.pictureVolume);
@@ -258,6 +287,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Form1";
             this.Text = "Music Player";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarPosition)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarVolume)).EndInit();
@@ -288,5 +318,7 @@
         private System.Windows.Forms.PictureBox pictureVolume;
         private System.Windows.Forms.Button Butanekdot;
         private System.Windows.Forms.Button butRestart;
+        private System.Windows.Forms.Button butlike;
+        private System.Windows.Forms.Label labLike;
     }
 }

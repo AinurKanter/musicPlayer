@@ -73,3 +73,7 @@ F:\VisualStudio\musicPlayer\MusicPlayer3\obj\Debug\MusicPlayer3.pdb
 C:\Users\Admin\source\repos\MusicPlayer3\MusicPlayer3\bin\Debug\TagLibSharp.dll
 C:\Users\Admin\source\repos\MusicPlayer3\MusicPlayer3\bin\Debug\TagLibSharp.pdb
 C:\Users\Admin\source\repos\MusicPlayer3\MusicPlayer3\bin\Debug\TagLibSharp.xml
+F:\VisualStudio\musicPlayer\MusicPlayer3\bin\Debug\TagLibSharp.dll
+F:\VisualStudio\musicPlayer\MusicPlayer3\bin\Debug\TagLibSharp.pdb
+F:\VisualStudio\musicPlayer\MusicPlayer3\bin\Debug\TagLibSharp.xml
+F:\VisualStudio\musicPlayer\MusicPlayer3\obj\Debug\MusicPlayer3.like.resources

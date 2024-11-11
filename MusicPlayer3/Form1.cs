@@ -18,16 +18,28 @@ namespace MusicPlayer3
         private Timer gifTimer; // Таймер для возврата к обложке после завершения GIF
         private bool userIsDragging = false;
         private bool gifShown = false; // Флаг для отображения GIF только один раз
-        private int triggerTimeInSeconds = 240; // Время для отображения GIF в секундах
+        private int triggerTimeInSeconds = 239; // Время для отображения GIF в секундах
         private bool volume = true;
         private Color dominantColor;
 
-        //Пути к иконкам звука
-        private string volumeFileTrue = @"C:\Users\Admin\source\repos\MusicPlayer3\Картинки\звук.png";
-        private string volumeFileFalse = @"C:\Users\Admin\source\repos\MusicPlayer3\Картинки\нет звука.png";
 
-        private string filePath = @"C:\Users\Admin\source\repos\MusicPlayer3\Aerosmith - Dream On (Re-record).mp3";
-        private string gifFilePath = @"C:\Users\Admin\source\repos\MusicPlayer3\Картинки\Кратос.gif"; // Путь к GIF-файлу
+        private WaveInEvent waveIn; // Для захвата аудио
+        private float[] audioData; // Данные для визуализации спектра
+        private const int fftSize = 1024; // Размер FFT
+        private Timer visualizationTimer; // Таймер для обновления визуализации
+
+
+        //Пути к иконкам звука
+        //private string volumeFileTrue = @"C:\Users\Admin\source\repos\MusicPlayer3\Картинки\звук.png"; 
+        private string volumeFileTrue = @"F:\VisualStudio\musicPlayer\Картинки\звук.png";
+       // private string volumeFileFalse = @"C:\Users\Admin\source\repos\MusicPlayer3\Картинки\нет звука.png";
+        private string volumeFileFalse = @"F:\VisualStudio\musicPlayer\Картинки\нет звука.png";
+
+//        private string filePath = @"C:\Users\Admin\source\repos\MusicPlayer3\Aerosmith - Dream On (Re-record).mp3";
+        private string filePath = @"F:\VisualStudio\musicPlayer\Aerosmith - Dream On (Re-record).mp3";
+
+        private string gifFilePath = @"F:\VisualStudio\musicPlayer\Картинки\Кратос.gif"; // Путь к GIF-файлу
+       // private string gifFilePath = @"C:\Users\Admin\source\repos\MusicPlayer3\Картинки\Кратос.gif"; // Путь к GIF-файлу
         private Image albumCover; // Сохраняем оригинальную обложку
 
 
@@ -341,6 +353,43 @@ namespace MusicPlayer3
         private void butRestart_Click(object sender, EventArgs e)
         {
             audioFileReader.Position = 0;
+        }
+        private int clickCount = 0;
+
+        private void butlike_Click(object sender, EventArgs e)
+        {
+            clickCount++;
+            if (clickCount == 5)
+            {
+                like like = new like();
+
+                // Открываем вторую форму
+                like.Show();
+                labLike.Text = ":)";
+                clickCount = 0;
+            }
+            else if (clickCount == 1)
+            {
+                labLike.Text = "Спасибо)";
+            }
+            else if (clickCount == 2)
+            {
+                labLike.Text = "Я это ценю)";
+            }
+            else if (clickCount == 3)
+            {
+                labLike.Text = "Ой... Ну хватит))))";
+            }
+            else if (clickCount == 4)
+            {
+                labLike.Text = "Ну давай ещё раз)";
+            }
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
