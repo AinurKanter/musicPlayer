@@ -30,10 +30,10 @@ namespace MusicPlayer3
 
 
         //Пути к иконкам звука
-        //private string volumeFileTrue = @"C:\Users\Admin\source\repos\MusicPlayer3\Картинки\звук.png"; 
-        private string volumeFileTrue = @"F:\VisualStudio\musicPlayer\Картинки\звук.png";
-       // private string volumeFileFalse = @"C:\Users\Admin\source\repos\MusicPlayer3\Картинки\нет звука.png";
-        private string volumeFileFalse = @"F:\VisualStudio\musicPlayer\Картинки\нет звука.png";
+        //private string volumeFileTrue = @"C:\Users\Admin\source\repos\MusicPlayer3\Картинки\белый звук.png"; 
+        private string volumeFileTrue = @"F:\VisualStudio\musicPlayer\Картинки\белый звук.png";
+        // private string volumeFileFalse = @"C:\Users\Admin\source\repos\MusicPlayer3\Картинки\белый нет звука.png";
+        private string volumeFileFalse = @"F:\VisualStudio\musicPlayer\Картинки\белый нет звука.png";
 
 //        private string filePath = @"C:\Users\Admin\source\repos\MusicPlayer3\Aerosmith - Dream On (Re-record).mp3";
         private string filePath = @"F:\VisualStudio\musicPlayer\Aerosmith - Dream On (Re-record).mp3";
@@ -167,7 +167,7 @@ namespace MusicPlayer3
             }
         }
 
-        private void ButPlyer_Click(object sender, EventArgs e)
+        private void ButPlyer_Click_1(object sender, EventArgs e)
         {
             if (audioFileReader != null && waveOutDevice != null)
             {
@@ -190,13 +190,13 @@ namespace MusicPlayer3
             }
         }
 
-        private void ButStop_Click(object sender, EventArgs e)
+        private void ButStop_Click_1(object sender, EventArgs e)
         {
             PausePlayback();
             timer.Stop();
         }
 
-        private void ButRepeat_Click(object sender, EventArgs e)
+        private void ButRepeat_Click_1(object sender, EventArgs e)
         {
             isRepeating = !isRepeating;
             labRepaet.Text = isRepeating ? "Repeat On" : "Repeat Off";
@@ -356,7 +356,7 @@ namespace MusicPlayer3
         }
         private int clickCount = 0;
 
-        private void butlike_Click(object sender, EventArgs e)
+        private void butlike_Click_1(object sender, EventArgs e)
         {
             clickCount++;
             if (clickCount == 5)
@@ -391,5 +391,7 @@ namespace MusicPlayer3
         {
 
         }
+
+      
     }
 }
